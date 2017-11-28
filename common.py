@@ -47,7 +47,7 @@ def login(user,password):
     if json.loads(retu_login)['code'] ==1:
         key_member_id['member_id'] = json.loads(retu_login)['data']['member_id']
         key_member_id['key'] = json.loads(retu_login)['data']['key']
-        print '账号登录成功'.decode('utf-8')
+        print '账号登录成功'
 
     else:
         print '登录失败'.decode('utf-8')
