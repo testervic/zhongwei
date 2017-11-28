@@ -63,9 +63,9 @@ def qd(member_id,key):
     retu_qd = requests_result(method,url,body)
 #    print retu_qd
     if json.loads(retu_qd) == 1:
-        print '获取财币成功'.decode('utf-8')
+        print '获取财币成功'
     else:
-        print '获取财币失败'.decode('utf-8')
+        print '获取财币失败'
         return 0
 
 retu_hashkey = {}
@@ -86,9 +86,9 @@ def get_hashkey(member_id,key):
     retu_get_hashkey = requests_result(method,url,body,headers)
     if json.loads(retu_get_hashkey)['code'] == 1:
         retu_hashkey['hashkey'] = json.loads(retu_get_hashkey)['data']['hashkey']
-        print 'hashkey获取成功: '.decode('utf-8'),retu_hashkey['hashkey']
+        print 'hashkey获取成功: ',retu_hashkey['hashkey']
     else:
-        print 'hashkey获取失败'.decode('utf-8')
+        print 'hashkey获取失败'
         return 0
 #    print retu_hashkey
 def plan_a(member_id,key):
@@ -109,10 +109,10 @@ def plan_a(member_id,key):
     method = 'post'
     retu_plan_a = requests_result(method,url,body,headers)
     if json.loads(retu_plan_a)['code'] == 1:
-        print '订阅股机A成功'.decode('utf-8')
+        print '订阅股机A成功'
         return retu_plan_a
     else:
-        print '订阅股机A失败'.decode('utf-8')
+        print '订阅股机A失败'
         return 0
 
 retu_seller_id = {}  #随机后的老师id
